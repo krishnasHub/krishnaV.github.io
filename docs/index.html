@@ -1,19 +1,54 @@
-<html>
-<head>
-<style>
+<!-- index.html -->
+    <!DOCTYPE html>
+    <html ng-app="krishIntroApp">
+    <head>
+	<style>
 	body {
-    background-image: url(./images/batman_background.jpg);
-    background-position: center top;
-    background-size: 100% auto;
-	color: #1a0000;
-},
+		background-image: url(./images/batman_background.jpg);
+		background-position: center top;
+		background-size: 100% auto;
+		color: #1a0000;
+	},
 
-</style>
-</head>
-<body background="./images/batman_background.jpg">
+	</style>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
 
-<h3>More coming up..</h3>
+      <!-- SPELLS -->
+      <!-- load angular via CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+          <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="script.js"></script>
+    </head>
+    <body ng-controller="mainController">
 
+        <!-- HEADER AND NAVBAR -->
+        <header>
+            <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Angular Routing Example</a>
+                </div>
 
-</body>
-</html>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+		{{ message }}
+
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+			<div ng-view></div>
+        </div>
+
+    </body>
+    </html>
