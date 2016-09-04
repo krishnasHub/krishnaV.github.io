@@ -7,6 +7,24 @@ var clientId = 'xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com'
         'https://www.googleapis.com/auth/gmail.readonly '+
         'https://www.googleapis.com/auth/gmail.send';
 		
+	
+	
+	  var sendFeedback = function(message, fromName, callback) {
+		  var email = '';
+		  email += 'To: krishnavjayanthi@gmail.com\r\n';
+		  email += 'Subject: Feedback from ' + fromName + '\r\n';
+		  email += '\r\n' + message;
+		  
+		  var sendRequest = gapi.client.gmail.users.messages.send({
+          'userId': 'me',
+          'resource': {
+            'raw': window.btoa(email).replace(/\+/g, '-').replace(/\//g, '_')
+          }
+        });
+        return sendRequest.execute(callback);
+	  }
+		
+		
       function handleClientLoad() {
         gapi.client.setApiKey(apiKey);
         window.setTimeout(checkAuth, 1);

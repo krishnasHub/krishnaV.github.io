@@ -44,5 +44,13 @@
 
         // create a message to display in our view
         $scope.message = 'Inside Contact';
+		$scope.senderName = '';
+		$scope.feedbackMessage = '';
+		
+		$scope.sendFeedbackToMe = function() {
+			sendFeedback($scope.feedbackMessage, $scope.senderName, function() {
+					alert('Message Sent Successfully');
+				);
+		}
     });
 	
