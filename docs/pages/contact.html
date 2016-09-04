@@ -14,7 +14,11 @@
 			<p>Or you can simply drop me a message! Providing me your name and email (would require you to sign in to your gmail account)</p>
 		</div>
 		
-		<input type="checkbox" ng-model="UseGoogleLogin" class="checkbox"/>Use Sign in using your google account
+		<div class="btn-group" data-toggle="buttons-checkbox">
+			<button type="button" ng-model="UseGoogleLogin" class="btn">Use Sign in using your google account</button>
+		</div>
+		
+		<!--<input type="checkbox" ng-model="UseGoogleLogin" />Use Sign in using your google account-->
 		
 		<div class="container" ng-show="UseGoogleLogin">
 			<div class="form-group">
