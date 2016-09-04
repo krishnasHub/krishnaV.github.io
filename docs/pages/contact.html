@@ -2,7 +2,7 @@
         <h1>Contact Page</h1>
 
         <p>{{ message }}</p>
-		<input type="text" ng-bind="senderName" />
-		<textarea id="textarea" ng-bind="feedbackMessage" />
+		<input type="text" ng-model="senderName" />
+		<textarea id="textarea" ng-model="feedbackMessage" />
 		<button class="btn btn-primary" ng-click="sendFeedbackToMe()">Send</button>
     </div>
