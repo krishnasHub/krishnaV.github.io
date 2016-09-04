@@ -64,7 +64,7 @@
 		}
 		
 		$scope.emailCallback = function() {
-			$scope.senderName = '';
+			$scope.emailId = '';
 			$scope.$digest();
 		}
 		
