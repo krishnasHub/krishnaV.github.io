@@ -48,15 +48,17 @@
 		$scope.feedbackMessage = '';
 		
 		$scope.showErrorMessage = function(message) {
-				alert(message);
+				alertify.error(message);
 		}
 		
 		$scope.showSuccessMessage = function(message) {
-			alert(message);
+			alertify.log(message);
 		}
 		
 		$scope.feedbackCallback = function() {
 			$scope.showSuccessMessage('Message Sent Successfully');
+			$scope.senderName = '';
+			$scope.feedbackMessage = '';
 		}
 		
 		$scope.sendFeedbackToMe = function() {
