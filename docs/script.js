@@ -56,9 +56,10 @@
 		}
 		
 		$scope.feedbackCallback = function() {
-			$scope.showSuccessMessage('Message Sent Successfully');
 			$scope.senderName = '';
 			$scope.feedbackMessage = '';
+			$scope.showSuccessMessage('Message Sent Successfully');
+			$scope.$digest();
 		}
 		
 		$scope.sendFeedbackToMe = function() {
