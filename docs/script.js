@@ -58,6 +58,10 @@
 			//if(!$scope.$$phase) $scope.$digest();
 		}
 		
+		$scope.toggleLogin = function() {
+			$scope.UseGoogleLogin = !$scope.UseGoogleLogin;
+		}
+		
 		$scope.showSuccessMessage = function(message) {
 			alertify.success(message);
 		}
