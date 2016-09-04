@@ -52,7 +52,7 @@
 		}
 		
 		$scope.showSuccessMessage = function(message) {
-			alertify.log(message);
+			alertify.success(message);
 		}
 		
 		$scope.feedbackCallback = function() {
