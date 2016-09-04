@@ -50,7 +50,7 @@
 		$scope.sendFeedbackToMe = function() {
 			sendFeedback($scope.feedbackMessage, $scope.senderName, function() {
 					alert('Message Sent Successfully');
-				);
+			};
 		}
     });
 	

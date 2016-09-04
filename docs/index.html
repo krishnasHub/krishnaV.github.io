@@ -28,6 +28,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 	  
 	  <!-- application script -->
+	  <script src="gapiemail.js"></script>
       <script src="script.js"></script>
     </head>
     <body ng-controller="mainController">
@@ -55,6 +56,6 @@
             <!-- this is where content will be injected -->
 			<div ng-view></div>
         </div>
-
+		<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
     </body>
     </html>
