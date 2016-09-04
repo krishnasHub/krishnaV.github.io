@@ -47,10 +47,12 @@
 		$scope.senderName = '';
 		$scope.feedbackMessage = '';
 		
+		$scope.feedbackCallback = function() {
+			alert('Message Sent Successfully');
+		}
+		
 		$scope.sendFeedbackToMe = function() {
-			sendFeedback($scope.feedbackMessage, $scope.senderName, function() {
-					alert('Message Sent Successfully');
-			};
+			sendFeedback($scope.feedbackMessage, $scope.senderName, $scope.feedbackCallback);
 		}
     });
 	
