@@ -64,7 +64,8 @@
 		}
 		
 		$scope.emailCallback = function() {
-			
+			$scope.senderName = '';
+			$scope.$digest();
 		}
 		
 		$scope.sendFeedbackToMe = function() {
