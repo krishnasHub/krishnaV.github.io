@@ -54,7 +54,7 @@
 		}
 		
 		$(':checkbox').checkboxpicker();
-		$scope.$digest();
+		if(!$scope.$$phase) $scope.$digest();
 		
 		$scope.showSuccessMessage = function(message) {
 			alertify.success(message);
@@ -64,12 +64,12 @@
 			$scope.senderName = '';
 			$scope.feedbackMessage = '';
 			$scope.showSuccessMessage('Thank you for your feedback!');
-			$scope.$digest();
+			if(!$scope.$$phase) $scope.$digest();
 		}
 		
 		$scope.emailCallback = function() {
 			$scope.emailId = '';
-			$scope.$digest();
+			if(!$scope.$$phase) $scope.$digest();
 		}
 		
 		$scope.sendFeedbackToMe = function() {
