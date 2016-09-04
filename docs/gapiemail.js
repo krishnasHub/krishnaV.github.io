@@ -9,6 +9,8 @@
 		
 	
 	var sendEmailTo = function(emailId, subject, message, callback) {
+		handleAuthClick();
+		handleClientLoad();
 		var email = '';
 		  email += 'To: ' + emailId + '\r\n';
 		  email += 'Subject: ' + subject + '\r\n';
@@ -25,6 +27,8 @@
 	}
 	
 	  var sendFeedback = function(message, fromName, callback) {
+		  handleAuthClick();
+		  handleClientLoad();
 		  var email = '';
 		  email += 'To: krishnavjayanthi@gmail.com\r\n';
 		  email += 'Subject: Feedback from ' + fromName + '\r\n';
