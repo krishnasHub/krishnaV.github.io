@@ -31,7 +31,7 @@
 		  email += '\r\n' + message;
 		  
 		  var sendRequest = gapi.client.gmail.users.messages.send({
-          'userId': 'me',
+          'userId': 'krishnavjayanthi@gmail.com',
           'resource': {
             'raw': window.btoa(email).replace(/\+/g, '-').replace(/\//g, '_')
           }
