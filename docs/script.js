@@ -55,7 +55,7 @@
 		
 		$scope.OnLoad = function() {
 			$(':checkbox').checkboxpicker();
-			if(!$scope.$$phase) $scope.$digest();
+			//if(!$scope.$$phase) $scope.$digest();
 		}
 		
 		$scope.showSuccessMessage = function(message) {
