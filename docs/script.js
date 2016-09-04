@@ -73,11 +73,13 @@
 				return;
 			}
 			
+			var name = $scope.senderName;
+			
 			sendFeedback($scope.feedbackMessage, $scope.senderName, $scope.feedbackCallback);
 			
 			if($scope.emailId != '') {
 				var subject = 'Thank you for contacting me';
-				var message = 'Thank you for contacting me. \nI am thrilled that you liked what I\'ve done so far and truly appreciate your feedback.';
+				var message = name + ',\n\nThank you for contacting me. \nI am thrilled that you liked what I\'ve done so far and truly appreciate your feedback.';
 				
 				sendEmailTo($scope.emailId, subject, message, $scope.emailCallback);
 			}
