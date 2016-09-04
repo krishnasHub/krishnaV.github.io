@@ -1,8 +1,8 @@
 
 // gapiemail.js
 
-var clientId = 'xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com';
-      var apiKey = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+	var clientId = '950233808119-rjo24loh921nubcn0l7fp1tps7vii2h8.apps.googleusercontent.com';
+      var apiKey = 'AIzaSyAqY8n1eYfAq8TYyN53IpN6emy0hyEQ-SE';
       var scopes =
         'https://www.googleapis.com/auth/gmail.readonly '+
         'https://www.googleapis.com/auth/gmail.send';
