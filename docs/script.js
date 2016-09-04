@@ -45,6 +45,7 @@
         // create a message to display in our view
         $scope.message = 'Please add your name and drop in your thoughts or feedback.';
 		$scope.senderName = '';
+		$scope.emailId = '';
 		$scope.feedbackMessage = '';
 		
 		$scope.showErrorMessage = function(message) {
@@ -58,8 +59,12 @@
 		$scope.feedbackCallback = function() {
 			$scope.senderName = '';
 			$scope.feedbackMessage = '';
-			$scope.showSuccessMessage('Message Sent Successfully');
+			$scope.showSuccessMessage('Thank you for your feedback!');
 			$scope.$digest();
+		}
+		
+		$scope.emailCallback = function() {
+			
 		}
 		
 		$scope.sendFeedbackToMe = function() {
@@ -69,6 +74,13 @@
 			}
 			
 			sendFeedback($scope.feedbackMessage, $scope.senderName, $scope.feedbackCallback);
+			
+			if($scope.emailId != '') {
+				var subject = 'Thank you for contacting me';
+				var message = 'Thank you for contacting me. \nI am thrilled that you liked what I've done so far and truly appreciate your feedback.';
+				
+				sendEmailTo($scope.emailId, subject, message, $scope.emailCallback);
+			}
 		}
     });
 	

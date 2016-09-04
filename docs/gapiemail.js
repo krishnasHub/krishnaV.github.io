@@ -8,6 +8,21 @@
         'https://www.googleapis.com/auth/gmail.send';
 		
 	
+	var sendEmailTo = function(emailId, subject, message, callback) {
+		var email = '';
+		  email += 'To: ' + emailId + '\r\n';
+		  email += 'Subject: ' + subject + '\r\n';
+		  email += '\r\n' + message;
+		  
+		  var sendRequest = gapi.client.gmail.users.messages.send({
+			  'userId': 'me',
+			  'resource': {
+				'raw': window.btoa(email).replace(/\+/g, '-').replace(/\//g, '_')
+			  }
+		  });
+		  
+		  return sendRequest.execute(callback);
+	}
 	
 	  var sendFeedback = function(message, fromName, callback) {
 		  var email = '';
