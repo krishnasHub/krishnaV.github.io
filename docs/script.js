@@ -47,6 +47,7 @@
 		$scope.senderName = '';
 		$scope.emailId = '';
 		$scope.feedbackMessage = '';
+		$scope.UseGoogleLogin = false;
 		
 		$scope.showErrorMessage = function(message) {
 				alertify.error(message);
