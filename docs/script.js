@@ -47,6 +47,7 @@
 		$scope.senderName = '';
 		$scope.emailId = '';
 		$scope.feedbackMessage = '';
+		$scope.ToggleText = 'my google account to send feedback';
 		$scope.UseGoogleLogin = false;
 		
 		$scope.showErrorMessage = function(message) {
@@ -60,6 +61,11 @@
 		
 		$scope.toggleLogin = function() {
 			$scope.UseGoogleLogin = !$scope.UseGoogleLogin;
+			
+			if($scope.UseGoogleLogin)
+				$scope.ToggleText = 'Do not use my google account to send feedback';
+			else
+				$scope.ToggleText = 'Use my google account to send feedback';
 		}
 		
 		$scope.showSuccessMessage = function(message) {
