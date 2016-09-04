@@ -54,6 +54,7 @@
 		}
 		
 		$(':checkbox').checkboxpicker();
+		$scope.$digest();
 		
 		$scope.showSuccessMessage = function(message) {
 			alertify.success(message);
