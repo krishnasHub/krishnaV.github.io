@@ -53,8 +53,10 @@
 				alertify.error(message);
 		}
 		
-		$(':checkbox').checkboxpicker();
-		if(!$scope.$$phase) $scope.$digest();
+		$scope.OnLoad = function() {
+			$(':checkbox').checkboxpicker();
+			if(!$scope.$$phase) $scope.$digest();
+		}
 		
 		$scope.showSuccessMessage = function(message) {
 			alertify.success(message);
