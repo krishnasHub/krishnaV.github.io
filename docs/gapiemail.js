@@ -81,7 +81,7 @@
       }
 	  
       function loadGmailApi() {
-        //gapi.client.load('gmail', 'v1', displayInbox);
+        gapi.client.load('gmail', 'v1', displayInbox);
       }
 	  
       function displayInbox() {
