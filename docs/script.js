@@ -53,6 +53,8 @@
 				alertify.error(message);
 		}
 		
+		$(':checkbox').checkboxpicker();
+		
 		$scope.showSuccessMessage = function(message) {
 			alertify.success(message);
 		}
