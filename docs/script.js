@@ -54,7 +54,7 @@
 		}
 		
 		$scope.OnLoad = function() {
-			$(':checkbox').checkboxpicker();
+			//$(':checkbox').checkboxpicker();
 			//if(!$scope.$$phase) $scope.$digest();
 		}
 		
