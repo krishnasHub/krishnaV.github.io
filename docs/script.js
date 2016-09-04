@@ -43,15 +43,28 @@
 	app.controller('contactController', function($scope) {
 
         // create a message to display in our view
-        $scope.message = 'Inside Contact';
+        $scope.message = 'Please add your name and drop in your thoughts or feedback.';
 		$scope.senderName = '';
 		$scope.feedbackMessage = '';
 		
+		$scope.showErrorMessage = function(message) {
+				alert(message);
+		}
+		
+		$scope.showSuccessMessage = function(message) {
+			alert(message);
+		}
+		
 		$scope.feedbackCallback = function() {
-			alert('Message Sent Successfully');
+			$scope.showSuccessMessage('Message Sent Successfully');
 		}
 		
 		$scope.sendFeedbackToMe = function() {
+			if($scope.senderName == '' || $scope.feedbackMessage == '') {
+				$scope.showErrorMessage('Please fill in your name and a feedback.');
+				return;
+			}
+			
 			sendFeedback($scope.feedbackMessage, $scope.senderName, $scope.feedbackCallback);
 		}
     });
