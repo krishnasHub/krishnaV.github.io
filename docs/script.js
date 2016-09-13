@@ -36,7 +36,9 @@
 	app.controller('aboutController', function($scope) {
 
         // create a message to display in our view
-        $scope.message = 'Inside About';
+        $scope.showMessage = function() {
+			alertify.success("This page will be ready shortly (Way before Half Life 3 is released anyway)");
+		}
     });
 	
 	
