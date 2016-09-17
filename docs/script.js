@@ -23,7 +23,20 @@
             .when('/contact', {
                 templateUrl : 'pages/contact.html',
                 controller  : 'contactController'
-            });
+            })
+			
+			// route for the game page
+			.when('/games', {
+				templateUrl : 'pages/games.html',
+                controller  : 'gamesController'
+			})
+			
+			// route for the software page
+			.when('/softwares', {
+				templateUrl : 'pages/softwares.html',
+                controller  : 'softwaresController'
+			})
+			;
     });
 
     // create the controller and inject Angular's $scope
@@ -41,6 +54,23 @@
 		}
     });
 	
+	
+	app.controller('gamesController', function($scope) {
+
+        // create a message to display in our view
+        $scope.showMessage = function() {
+			alertify.success("This page will be ready shortly (Way before Half Life 3 is released anyway)");
+		}
+    });
+	
+	
+	app.controller('softwaresController', function($scope) {
+
+        // create a message to display in our view
+        $scope.showMessage = function() {
+			alertify.success("This page will be ready shortly (Way before Half Life 3 is released anyway)");
+		}
+    });
 	
 	app.controller('contactController', function($scope) {
 
