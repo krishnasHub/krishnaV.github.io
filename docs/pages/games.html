@@ -1,10 +1,164 @@
 <div class="jumbotron text-center" style="background-color: transparent !important; padding-top: 0 !important;">
 	<h2>Games!</h2>
 
-	<p>Life is afterall all fun and games.. right?</p>
+	<p>Life is a lot about fun and games.. isn't it..?</p>
 	
 	<div class="container text-left">
+		<p>
+			<b>Trails of Arkenstone</b>
+			<br />
+			A turn based strategy game that's a cross between Scotland-Yard (the board game) and The Lord of the Rings Universe,
+			where the player has to guide a she-elf carrying the 'Arkenstone' from the city of Gondor to Erebor and hide it there while Sauron's Orcs try and catch her!
+			<br />
+			
+			<button class="btn btn-info" data-toggle="collapse" data-target="#arkenstone-plus"><span class="glyphicon glyphicon-plus"></span> More</i></button>
+			<button class="btn btn-primary" data-toggle="collapse" data-target="#arkenstone-ai"><span class="glyphicon glyphicon-tower"></span> AI</i></button>
+			<button class="btn btn-success" data-toggle="collapse" data-target="#arkenstone-tech"><span class="glyphicon glyphicon-wrench"></span> Tech Used</i></button>
+			<button class="btn btn-warning" data-toggle="collapse" data-target="#arkenstone-vid"><span class="glyphicon glyphicon-film"></span> Video</i></button>
+			<button class="btn btn-default" data-toggle="collapse" data-target="#arkenstone-dwn"><span class="glyphicon glyphicon-download"></span> Download</i></button>
+			
+			<div id="arkenstone-plus" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				More information:<br>
+				The player guides the elf from one location to another over a huge map of Middle Earth.
+				The Orcs start at different locations on the same map and know the player's initial location.<br>
+				The player can select any of the three modes of transport where each mode has a cost associated to taking it.
+				<ul>
+					<li>Road  - Cheapest but can only cover short distances.</li>
+					<li>Cart  - Covers medium distances but costs more than roads.</li>
+					<li>Eagle - Can travel massive distances, but very expensive to take.</li>
+				</ul>
+
+				As soon as the player decides where to lead the elf, the Orcs know what mode of transport was taken by the elf.
+				Sauron does have spies everywhere on Middle Earth.<br>
+				Since each location on the map is could be connected to several others with the same mode of transport, it's not easy to know with certainty where the player has landed.
+				After a couple of hops, it can get all the more complicated to know exactly where the player is.<br>
+				This is where the AI comes in.<br><br>
+				
+				If any Orc lands on the location where the elf is, its game over for the elf and the player loses.<br>
+				If the player manages to lead the elf to Erebor without getting caught or losing all her money, the player wins!
+			</div>
+			
+			<div id="arkenstone-ai" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				AI used:<br>
+				The Orcs use what I call "Orc Intelligence" which is the crux of the AI.<br>
+				Orc Intelligence predicts the current location of the player based on information about the kind of travel the player has taken so far.
+				This is a <b>probability based search heuristic</b> algorithm that I developed for thus game.<br><br>
+				
+				Each Orc has an individual personality-AI that 'decides' what to do with the predicted player's location.
+				This makes all Orcs unique in their own way to tracking and capturing the player.<br>
+				A certain degree of randomness was introduced after play testing to ensure that players can't identify patterns in the AI's behaviour.
+			</div>
+			
+			<div id="arkenstone-tech" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				Technologies used:<br>
+				<ul>
+					<li>Unreal Engine 4</li>
+					<li>C++</li>
+					<li>Unreal Blueprints</li>
+					<li>Unreal Marketplace</li>
+					<li>Windows Voice Recorder</li>
+				</ul>
+			</div>
+			
+			<div id="arkenstone-vid" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				Youtube link:<br>
+			</div>
+			
+			<div id="arkenstone-dwn" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				Enough talk. Play it yourself:
+			</div>
+			
+		</p>
 		
+		<p>
+			<b>Survive</b>
+			<br />
+			A turn based strategy game that's a cross between Scotland-Yard (the board game) and The Lord of the Rings Universe,
+			where the player has to guide a she-elf carrying the 'Arkenstone' from the city of Gondor to Erebor and hide it there while Sauron's Orcs try and catch her!
+			<br />
+			
+			<button class="btn btn-info" data-toggle="collapse" data-target="#survive-plus"><span class="glyphicon glyphicon-plus"></span> More</i></button>
+			<button class="btn btn-primary" data-toggle="collapse" data-target="#survive-ai"><span class="glyphicon glyphicon-tower"></span> AI</i></button>
+			<button class="btn btn-success" data-toggle="collapse" data-target="#survive-tech"><span class="glyphicon glyphicon-wrench"></span> Tech Used</i></button>
+			<button class="btn btn-warning" data-toggle="collapse" data-target="#survive-vid"><span class="glyphicon glyphicon-film"></span> Video</i></button>
+			<button class="btn btn-default" data-toggle="collapse" data-target="#survive-dwn"><span class="glyphicon glyphicon-download"></span> Download</i></button>
+			
+			<div id="survive-plus" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				The Orcs use what I call "Orc Intelligence" which is the crux of the AI.
+				Orc Intelligence predicts the current location of the player based on information about the kind of travel the player has taken so far.
+				The player can travel by road, take a cart or fly a majestic eagle.
+				This is a probability based search heuristic algorithm that I developed.
+				Once the AI has the predicted location of the player, the individual Orcs use this information to tackle the player.
+				Each Orc has a unique personality that drives them to use the predicted location to make its move.
+				One Orc might follow the player, one might try to cut her down while another would randomly wander close to the player assisting the other Orcs.
+				This project was developed in Unreal 4 with a mix of Blueprints and C++ as the back-end code base.
+			</div>
+			
+			<div id="survive-ai" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				AI:
+			</div>
+			
+			<div id="survive-tech" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				Technologies used
+				<ul>
+					<li>Unreal Engine 4</li>
+					<li>C++</li>
+					<li>Unreal Blueprints</li>
+					<li>Unreal Marketplace</li>
+				</ul>
+			</div>
+			
+			<div id="survive-vid" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				Youtube link:
+			</div>
+			
+			<div id="survive-dwn" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				Enough talk. Play it yourself:
+			</div>
+			
+		</p>
+		
+		<p>
+			<b>Shoot em Up!</b>
+			<br />
+			A turn based strategy game that's a cross between Scotland-Yard (the board game) and The Lord of the Rings Universe,
+			where the player has to guide a she-elf carrying the 'Arkenstone' from the city of Gondor to Erebor and hide it there while Sauron's Orcs try and catch her!
+			<br />
+			
+			<button class="btn btn-info" data-toggle="collapse" data-target="#shoot-plus"><span class="glyphicon glyphicon-plus"></span> More</i></button>
+			<button class="btn btn-primary" data-toggle="collapse" data-target="#shoot-ai"><span class="glyphicon glyphicon-tower"></span> AI</i></button>
+			<button class="btn btn-success" data-toggle="collapse" data-target="#shoot-tech"><span class="glyphicon glyphicon-wrench"></span> Tech Used</i></button>
+			<button class="btn btn-warning" data-toggle="collapse" data-target="#shoot-vid"><span class="glyphicon glyphicon-film"></span> Video</i></button>
+			<button class="btn btn-default" data-toggle="collapse" data-target="#shoot-dwn"><span class="glyphicon glyphicon-download"></span> Download</i></button>
+			
+			<div id="shoot-plus" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				
+				
+				
+			</div>
+			
+			<div id="shoot-ai" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				
+			</div>
+			
+			<div id="shoot-tech" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				Technologies used
+				<ul>
+					<li>Unreal Engine 4</li>
+					<li>C++</li>
+					<li>Unreal Blueprints</li>
+					<li>Unreal Marketplace</li>
+				</ul>
+			</div>
+			
+			<div id="shoot-vid" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				Youtube link:
+			</div>
+			
+			<div id="shoot-dwn" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				Enough talk. Play it yourself:
+			</div>
+		</p>
 	</div>
 	
 </div>
