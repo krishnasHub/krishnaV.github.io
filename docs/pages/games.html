@@ -73,8 +73,8 @@
 		<p>
 			<b>Survive</b>
 			<br />
-			A turn based strategy game that's a cross between Scotland-Yard (the board game) and The Lord of the Rings Universe,
-			where the player has to guide a she-elf carrying the 'Arkenstone' from the city of Gondor to Erebor and hide it there while Sauron's Orcs try and catch her!
+				Remember the monsters that hid under your bed? This is a game where these monsters are real and are constantly hunting you down!<br>
+				A survival-horror game where you use stealth and observations to sneak behind monsters to accomplish certain tasks in order to complete a level.
 			<br />
 			
 			<button class="btn btn-info" data-toggle="collapse" data-target="#survive-plus"><span class="glyphicon glyphicon-plus"></span> More</i></button>
@@ -84,18 +84,46 @@
 			<button class="btn btn-default" data-toggle="collapse" data-target="#survive-dwn"><span class="glyphicon glyphicon-download"></span> Download</i></button>
 			
 			<div id="survive-plus" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
-				The Orcs use what I call "Orc Intelligence" which is the crux of the AI.
-				Orc Intelligence predicts the current location of the player based on information about the kind of travel the player has taken so far.
-				The player can travel by road, take a cart or fly a majestic eagle.
-				This is a probability based search heuristic algorithm that I developed.
-				Once the AI has the predicted location of the player, the individual Orcs use this information to tackle the player.
-				Each Orc has a unique personality that drives them to use the predicted location to make its move.
-				One Orc might follow the player, one might try to cut her down while another would randomly wander close to the player assisting the other Orcs.
-				This project was developed in Unreal 4 with a mix of Blueprints and C++ as the back-end code base.
+				More information:<br>
+				This is a first person survival horror game where Stealth is the only weapon (Other than the massive shiny axe the player gets towards the end).
+				You can hear a monster walk and even breathe if you listen carefully.<br>
+				The mosnter moves on a predefined path in a locality, constantly looking for the player.
+				On seeing the player, the monster rushes towards her.
+				If the player manages to get out of the monster's line of sight,
+				the monster searches in the nearby location for a short period before giving up and returning to his patrol.<br><br>
+				
+				It soudns pretty easy right..?<br>
+				Now imagine playing this game where light is scarse. In a weird lightless world you only have a flashlight you can use to look around.
+				The monster on the other hand, doesn't need a flashlight to see you! Well, he is a monster, he's bound to have abilities like these..<br>
+				Your flashlight relies on batteries that run out over time. If that happenes, you're in a mess!<br>
+				Flashlights are placed around the map but are scarse, forcing the player to incorporate resource management.<br>
+				Each level has tasks that need to be accomplished in order to complete the level and move to the next. A task can be as simple
+				as going from one location to another, while another can be as complicated as collecting several parts of a magical device to fix it.
+				All of which demand a stealthy approach.<br><br>
+				Later in a level, the player gets an axe that she uses to hunt the monster!
+				During this stage, the monster flees on seeing the player. At this point, the objective of the game is reversed where the hunter now becomes the hunted.<br>
+				The player must still use a certain level of stealth in order to get close enough to the monster in order to kill it.
 			</div>
 			
 			<div id="survive-ai" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
-				AI:
+				AI used:<br>
+				The primary AI used is a <b>hunt-escape</b> algorithm that the monsters encorporate. The monsters have a predefined path that they follow.
+				During this, they can sense the player's presence. Player sensing is based on the following parameters:
+				<ul>
+					<li>Is the player in the monster's line of sight?</li>
+					<li>How far away is the player?</li>
+					<li>Is the player's flashlight on?</li>
+					<li>is the player noisy?</li>
+				</ul>
+				Once the monster 'senses' the player, it starts following her. When the player is no longer 'sensed' by the monster, the monster 
+				heads to a random location in the nearby area, increasing the chance to finding the player once again.
+				This is implemented using a Finite State Machine that defines the monster's state.<br><br>
+				later in the game, the mosnter runs away from the player on 'sensing' the player. This is implemented easily by adding a nother state in
+				the monster's FSM.<br><br>
+				Another addition to the AI is a zombie.
+				I mean, we have monsters in a weird world with creepy sounds and the player picking up magical orbs.. Is including a zombie really that off-track..?<br>
+				The zombie, unlike the monster, only roams around in the map. On 'sensing' the player, informs the nearby monsters to the player's location.
+				Zombies are implemented using their own FSM assisting the monsters.				
 			</div>
 			
 			<div id="survive-tech" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
@@ -121,8 +149,8 @@
 		<p>
 			<b>Shoot em Up!</b>
 			<br />
-			A turn based strategy game that's a cross between Scotland-Yard (the board game) and The Lord of the Rings Universe,
-			where the player has to guide a she-elf carrying the 'Arkenstone' from the city of Gondor to Erebor and hide it there while Sauron's Orcs try and catch her!
+				We used strategy, we used stealth.. Now it's time for some shooting fun! That's what this new game is about.<br>
+				Equipped with a multi-purpose gun and a variety of ammo, aim and shoot your way through waves of grunts and trolls in several maps.
 			<br />
 			
 			<button class="btn btn-info" data-toggle="collapse" data-target="#shoot-plus"><span class="glyphicon glyphicon-plus"></span> More</i></button>
@@ -132,13 +160,41 @@
 			<button class="btn btn-default" data-toggle="collapse" data-target="#shoot-dwn"><span class="glyphicon glyphicon-download"></span> Download</i></button>
 			
 			<div id="shoot-plus" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				More information:<br>
+				You start the game with a gun that shoots simple bullets. Grunts spawn at random locations around the player. A few well aimed shots kill a grunt.<br>
+				Grunts can see the player and on seeing one, run towards the player swinging their mace.If they get close enough, can attack the player.
+				Their strength lies in their numbers.<br>
+				The player has to be agile and move around the map gathering ammo in order to dodge these grunts and manage to kill them.<br><br>
 				
+				Then there are the trolls. These are slow. Very slow but extremely strong. I've seen players empty their entire ammo on a troll, only to half it's health.
+				One hit by a troll can damage all characters around a certain radius (both players and the grunts).<br><br>
 				
+				Now for the interesting part: These characters - The grunts and the trolls, are not really friends.
+				In this universe, it's every man, grunt, troll for himself.
+				Grunts act in unision, working together to attack the player and the trolls equally. Trolls have their own thing going on.
+				They attack the grunts but not the player!<br>
+				This aspect is not really made clear. Only if the player gets hostole towards a troll, does the troll ever attack the player.<br>
+				But that does not make the troll your friend. The objective of each level is to survive till a gate is unlocked.
+				Once the gate is unlocked, it's a race between the player and the troll. Whoever enters the gate first, wins.<br>
+				This creates an interesting dynamic where a smart player would first let the troll assist in killing the grunts and later want to kill the troll
+				in order to finish the level.<br><br>
+				
+				The underlying idea is to show that creatures (or people) that look different than you or scarier than you need not always be your enemy.
 				
 			</div>
 			
 			<div id="shoot-ai" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
+				AI used:<br>
+				The AI in focus for this game was for the troll. It incorporates the tit-for-tat strategy to decide weather or not to attack the player.
+				It goes one step further than your usual 'if-attacked: attack' strategy and incorporates forgiveness.
+				This is in essense a variation of Tit for Double-Tat strtagey used in what I call <b>intension engine</b><br>
+				The algorithm measures the player's intention by analyzing the payer's choice of target for evry shot fired (or not fired).
+				This drives the troll's behaviour.<br><br>
 				
+				The troll and the grunt both have their own FSM engines that dictate their motion, be it resting, hunting a player, attacking or dying.<br>
+				There are three ammo types that the player can use against the NPCs.
+				Once the player picks an ammo, he loses the older one. He cannot carry more than one weapon at any given time forcing him to strategize keeping in mind
+				the location of the ammo that he needs.<br>
 			</div>
 			
 			<div id="shoot-tech" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
