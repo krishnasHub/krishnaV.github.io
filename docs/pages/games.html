@@ -73,8 +73,7 @@
 		<p>
 			<b>Survive</b>
 			<br />
-				Remember the monsters that hid under your bed? This is a game where these monsters are real and are constantly hunting you down!<br>
-				A survival-horror game where you use stealth and observations to sneak behind monsters to accomplish certain tasks in order to complete a level.
+				Remember the monsters that hid under your bed? This is a game where these monsters are real and are constantly hunting you down!
 			<br />
 			
 			<button class="btn btn-info" data-toggle="collapse" data-target="#survive-plus"><span class="glyphicon glyphicon-plus"></span> More</i></button>
@@ -87,43 +86,22 @@
 				More information:<br>
 				This is a first person survival horror game where Stealth is the only weapon (Other than the massive shiny axe the player gets towards the end).
 				You can hear a monster walk and even breathe if you listen carefully.<br>
-				The mosnter moves on a predefined path in a locality, constantly looking for the player.
-				On seeing the player, the monster rushes towards her.
-				If the player manages to get out of the monster's line of sight,
-				the monster searches in the nearby location for a short period before giving up and returning to his patrol.<br><br>
+				The player has to observe the monster's movements and learn it's patterns in order to sneak around it.<br><br>
 				
-				It soudns pretty easy right..?<br>
-				Now imagine playing this game where light is scarse. In a weird lightless world you only have a flashlight you can use to look around.
-				The monster on the other hand, doesn't need a flashlight to see you! Well, he is a monster, he's bound to have abilities like these..<br>
-				Your flashlight relies on batteries that run out over time. If that happenes, you're in a mess!<br>
-				Flashlights are placed around the map but are scarse, forcing the player to incorporate resource management.<br>
 				Each level has tasks that need to be accomplished in order to complete the level and move to the next. A task can be as simple
-				as going from one location to another, while another can be as complicated as collecting several parts of a magical device to fix it.
-				All of which demand a stealthy approach.<br><br>
-				Later in a level, the player gets an axe that she uses to hunt the monster!
-				During this stage, the monster flees on seeing the player. At this point, the objective of the game is reversed where the hunter now becomes the hunted.<br>
-				The player must still use a certain level of stealth in order to get close enough to the monster in order to kill it.
+				as going from one location to another, or as complicated as collecting several parts of a magical device to fix it.<br>
+				Later in a level, the player gets an axe that she uses to hunt monsters.
+				At this point, the objective of the game is reversed where the hunter now becomes the hunted.<br>
 			</div>
 			
 			<div id="survive-ai" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
 				AI used:<br>
-				The primary AI used is a <b>hunt-escape</b> algorithm that the monsters encorporate. The monsters have a predefined path that they follow.
-				During this, they can sense the player's presence. Player sensing is based on the following parameters:
-				<ul>
-					<li>Is the player in the monster's line of sight?</li>
-					<li>How far away is the player?</li>
-					<li>Is the player's flashlight on?</li>
-					<li>is the player noisy?</li>
-				</ul>
-				Once the monster 'senses' the player, it starts following her. When the player is no longer 'sensed' by the monster, the monster 
-				heads to a random location in the nearby area, increasing the chance to finding the player once again.
-				This is implemented using a Finite State Machine that defines the monster's state.<br><br>
-				later in the game, the mosnter runs away from the player on 'sensing' the player. This is implemented easily by adding a nother state in
-				the monster's FSM.<br><br>
-				Another addition to the AI is a zombie.
-				I mean, we have monsters in a weird world with creepy sounds and the player picking up magical orbs.. Is including a zombie really that off-track..?<br>
-				The zombie, unlike the monster, only roams around in the map. On 'sensing' the player, informs the nearby monsters to the player's location.
-				Zombies are implemented using their own FSM assisting the monsters.				
+				The monster's movement and behavior is represented by a Finite State Machine.
+				But this behavior is controlled by a <b>hunt-escape</b> algorithm that I developed to make the monster seem more monster-like.<br>
+				While on the move, a monster can "sense" the player's presence based on the hunt-escape algorithm.<br><br>
+				
+				Assisting the monster, is a zombie. On sensing the player, a zombie shouts loudly attracting close-by monsters to them.
+				Zombie behavior is represented using its own FSM but uses the same sense engine.
 			</div>
 			
 			<div id="survive-tech" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
@@ -149,8 +127,7 @@
 		<p>
 			<b>Shoot em Up!</b>
 			<br />
-				We used strategy, we used stealth.. Now it's time for some shooting fun! That's what this new game is about.<br>
-				Equipped with a multi-purpose gun and a variety of ammo, aim and shoot your way through waves of grunts and trolls in several maps.
+				If shooting grunts and trolls with a variety of guns and watching them die is your thing.. You'll love this game!
 			<br />
 			
 			<button class="btn btn-info" data-toggle="collapse" data-target="#shoot-plus"><span class="glyphicon glyphicon-plus"></span> More</i></button>
@@ -161,13 +138,11 @@
 			
 			<div id="shoot-plus" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
 				More information:<br>
-				You start the game with a gun that shoots simple bullets. Grunts spawn at random locations around the player. A few well aimed shots kill a grunt.<br>
-				Grunts can see the player and on seeing one, run towards the player swinging their mace.If they get close enough, can attack the player.
-				Their strength lies in their numbers.<br>
-				The player has to be agile and move around the map gathering ammo in order to dodge these grunts and manage to kill them.<br><br>
-				
-				Then there are the trolls. These are slow. Very slow but extremely strong. I've seen players empty their entire ammo on a troll, only to half it's health.
-				One hit by a troll can damage all characters around a certain radius (both players and the grunts).<br><br>
+				We used strategy, we used stealth.. Now it's time for some wild shooting mahem!<br>				
+				Grunts spawn at random locations and run towards the player swinging their mace.
+				Kiled by a couple of shots, their strength lies in their numbers.<br>				
+				Trolls are slow, but extremely strong. I've seen players empty their entire ammo on a troll, barely hurting it.
+				One hit by a troll can damage all characters within a certain radius.<br><br>
 				
 				Now for the interesting part: These characters - The grunts and the trolls, are not really friends.
 				In this universe, it's every man, grunt, troll for himself.
