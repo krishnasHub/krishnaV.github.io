@@ -41,6 +41,22 @@
 
     // create the controller and inject Angular's $scope
     app.controller('mainController', function($scope) {
+		
+		$scope.getGreeting = function() {
+			var dt = new Date();
+			var hours = dt.getHours();
+			
+			if(hours > 8 && hours < 12)
+				return "Morning"
+			
+			if(hours > 12 && hours < 16)
+				return "Afternoon"
+			
+			if(hours > 16)
+				return "Evening"
+		}
+		
+		$scope.welcomeMessage = "Good " + $scope.getGreeting();
 
         // create a message to display in our view
         $scope.message = 'Inside Main';
