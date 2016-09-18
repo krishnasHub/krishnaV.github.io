@@ -21,7 +21,7 @@
 				More information:<br>
 				The player guides the elf from one location to another over a huge map of Middle Earth.
 				Orcs start at different locations on the same map and know the player's initial location.<br>
-				Players can select any of these three modes of transport where each mode has a cost associated to taking it.
+				Players can select any of these three modes of transport where each mode has a cost associated with it.
 				<ul>
 					<li>Road  - Cheapest but can only cover short distances.</li>
 					<li>Cart  - Covers medium distances but costs more than roads.</li>
@@ -127,6 +127,7 @@
 		<p>
 			<b>Shoot em Up!</b>
 			<br />
+				We used strategy, we used stealth.. Now it's time for some wild shooting mahem!
 				If shooting grunts and trolls with a variety of guns and watching them die is your thing.. You'll love this game!
 			<br />
 			
@@ -138,38 +139,29 @@
 			
 			<div id="shoot-plus" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
 				More information:<br>
-				We used strategy, we used stealth.. Now it's time for some wild shooting mahem!<br>				
-				Grunts spawn at random locations and run towards the player swinging their mace.
-				Kiled by a couple of shots, their strength lies in their numbers.<br>				
-				Trolls are slow, but extremely strong. I've seen players empty their entire ammo on a troll, barely hurting it.
-				One hit by a troll can damage all characters within a certain radius.<br><br>
+				Killed by a couple of shots, the strength of grunts lies in their numbers.
+				Trolls are slow, but extremely strong. I've seen players empty their entire ammo on a troll, barely hurting it.<br><br>
 				
-				These characters - The grunts and the trolls, are not really friends.
-				In this universe, it's every man, grunt, troll for himself.
-				Grunts act in unision, working together to attack the player and the trolls equally. Trolls have their own thing going on.
-				They attack the grunts but not the player!<br>
-				This aspect is not really made clear. Only if the player gets hostole towards a troll, does the troll ever attack the player.<br>
+				In this universe, it's every man, grunt or troll for himself.
+				Grunts act in unison, working together to swarm the player and the troll with equal vigor. Trolls have their own thing going on.<br>
+				Only if the player gets hostile towards a troll, does the troll ever attack the player.
 				But that does not make the troll your friend. The objective of each level is to survive till a gate is unlocked.
-				Once the gate is unlocked, it's a race between the player and the troll. Whoever enters the gate first, wins.<br>
+				Once done, it's a race between the player and the troll. Whoever enters the gate first, wins.<br>
 				This creates an interesting dynamic where a smart player would first let the troll assist in killing the grunts and later want to kill the troll
 				in order to finish the level.<br><br>
 				
-				The underlying idea is to show that creatures (or people) that look different than you or scarier than you need not always be your enemy.
-				
+				The underlying idea is to show that creatures (or people) that look different than you or scarier than you need not be your enemy.				
 			</div>
 			
 			<div id="shoot-ai" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
 				AI used:<br>
-				The AI in focus for this game was for the troll. It incorporates the tit-for-tat strategy to decide weather or not to attack the player.
-				It goes one step further than your usual 'if-attacked: attack' strategy and incorporates forgiveness.
-				This is in essense a variation of Tit for Double-Tat strtagey used in what I call <b>intension engine</b><br>
-				The algorithm measures the player's intention by analyzing the payer's choice of target for evry shot fired (or not fired).
-				This drives the troll's behaviour.<br><br>
+				The AI in focus for this game was for the troll. It incorporates the tit-for-tat strategy to decide whether or not to attack the player.
+				It goes one step further than your usual "if attacked then attack" strategy and incorporates forgiveness.
+				This is in essence a variation of <b>Tit for Double-Tat</b> strategy  used in what I call <b>intension engine</b><br>
+				The algorithm measures the player's intention by analyzing the payer's choice of target for every shot fired (or not fired).
+				This drives the troll's behavior.<br><br>
 				
-				The troll and the grunt both have their own FSM engines that dictate their motion, be it resting, hunting a player, attacking or dying.<br>
-				There are three ammo types that the player can use against the NPCs.
-				Once the player picks an ammo, he loses the older one. He cannot carry more than one weapon at any given time forcing him to strategize keeping in mind
-				the location of the ammo that he needs.<br>
+				The troll and the grunt both have their own FSM that represent their behavior, be it resting, hunting a player, attacking or dying.<br>
 			</div>
 			
 			<div id="shoot-tech" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
