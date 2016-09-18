@@ -20,18 +20,18 @@
 			<div id="arkenstone-plus" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
 				More information:<br>
 				The player guides the elf from one location to another over a huge map of Middle Earth.
-				The Orcs start at different locations on the same map and know the player's initial location.<br>
-				The player can select any of the three modes of transport where each mode has a cost associated to taking it.
+				Orcs start at different locations on the same map and know the player's initial location.<br>
+				Players can select any of these three modes of transport where each mode has a cost associated to taking it.
 				<ul>
 					<li>Road  - Cheapest but can only cover short distances.</li>
 					<li>Cart  - Covers medium distances but costs more than roads.</li>
 					<li>Eagle - Can travel massive distances, but very expensive to take.</li>
 				</ul>
-
-				As soon as the player decides where to lead the elf, the Orcs know what mode of transport was taken by the elf.
-				Sauron does have spies everywhere on Middle Earth.<br>
-				Since each location on the map is could be connected to several others with the same mode of transport, it's not easy to know with certainty where the player has landed.
-				After a couple of hops, it can get all the more complicated to know exactly where the player is.<br>
+				
+				As soon as the player decides a mode of transport and selects the next location on the map, the Orcs know what mode of transport was taken by the elf.
+				(Sauron does have spies everywhere on Middle Earth)<br><br>
+				Since each location on the map could be connected to several others with the same mode of transport, it's not easy to know with certainty where the player has landed.
+				After a couple of hops, this set of possible locations grows non-linearly. 
 				This is where the AI comes in.<br><br>
 				
 				If any Orc lands on the location where the elf is, its game over for the elf and the player loses.<br>
@@ -40,13 +40,13 @@
 			
 			<div id="arkenstone-ai" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
 				AI used:<br>
-				The Orcs use what I call "Orc Intelligence" which is the crux of the AI.<br>
+				The Orcs use what I call <b>"Orc Intelligence"</b> which is the crux of the AI.<br>
 				Orc Intelligence predicts the current location of the player based on information about the kind of travel the player has taken so far.
-				This is a <b>probability based search heuristic</b> algorithm that I developed for thus game.<br><br>
+				This is a <b>probability based search heuristic</b> algorithm that I developed for this game.<br><br>
 				
-				Each Orc has an individual personality-AI that 'decides' what to do with the predicted player's location.
+				Each Orc has an individual personality-AI that "decides" what to do with the predicted player's location.
 				This makes all Orcs unique in their own way to tracking and capturing the player.<br>
-				A certain degree of randomness was introduced after play testing to ensure that players can't identify patterns in the AI's behaviour.
+				A certain degree of randomness was introduced after play testing to ensure that players can't identify patterns in the AI's behavior.
 			</div>
 			
 			<div id="arkenstone-tech" class="collapse jumbotron text-left" style="padding: 20px !important; line-height: 1.4 !important;">
