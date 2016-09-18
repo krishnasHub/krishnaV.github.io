@@ -46,13 +46,13 @@
 			var dt = new Date();
 			var hours = dt.getHours();
 			
-			if(hours > 8 && hours < 12)
+			if(hours >= 8 && hours < 12)
 				return "Morning"
 			
-			if(hours > 12 && hours < 16)
+			if(hours >= 12 && hours < 16)
 				return "Afternoon"
 			
-			if(hours > 16)
+			if(hours >= 16)
 				return "Evening"
 		}
 		
